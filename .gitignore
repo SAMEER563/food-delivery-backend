@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Operating system files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# npm package-lock files
+package-lock.json
+
+# Optional: Build output folder (if you have a build process)
+dist/
+
+# Optional: Debugger config
+.vscode/
+
+# Optional: Coverage reports (if using testing tools)
+coverage/
+
+# Optional: Temporary files
+*.swp  # vim swap files
+*.swo
