@@ -2,15 +2,6 @@
 
 This is the backend for a food delivery application built using **Node.js**, **Express.js**, **Axios**, **JWT**, and **Bcrypt**. The backend handles user authentication, restaurant and menu management, order processing, and more. It communicates with a front-end application to facilitate a seamless food delivery experience.
 
-## Table of Contents
-
-- [Features](#features)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Usage](#usage)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -28,7 +19,7 @@ This is the backend for a food delivery application built using **Node.js**, **E
 - **Axios**: Promise-based HTTP client for making requests.
 - **JWT (JSON Web Tokens)**: Authentication mechanism for securely transmitting information.
 - **Bcrypt**: Library for hashing and salting passwords.
-- **MongoDB** (optional): NoSQL database for storing application data.
+- **MongoDB** : NoSQL database for storing application data.
 
 ## Installation
 
@@ -43,12 +34,12 @@ Ensure that you have the following installed:
 
 1. Clone the repository to your local machine:
     ```bash
-    git clone https://github.com/your-username/food-delivery.git
+    https://github.com/SAMEER563/food-delivery-backend.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd food-delivery
+    cd food-delivery-backend
     ```
 
 3. Install dependencies:
@@ -62,7 +53,7 @@ Ensure that you have the following installed:
     ```env
     PORT=5000
     JWT_SECRET=your-jwt-secret
-    MONGO_URI=mongodb://localhost:27017/food-delivery
+    MONGO_URI=your-mongoDB-string
     ```
 
 5. Start the server:
@@ -77,38 +68,20 @@ Your server should now be running on `http://localhost:5000`.
 The backend exposes a set of API endpoints for interacting with the system. You can use Postman or any HTTP client to test the routes.
 
 - **Authentication**
-    - **POST** `/api/auth/register`: Register a new user (provides a JWT on success).
-    - **POST** `/api/auth/login`: Login an existing user and get a JWT.
-    - **POST** `/api/auth/refresh`: Refresh JWT token using a valid refresh token.
+    - **POST** `/register`: Register a new user (provides a JWT on success).
+    - **POST** `/login`: Login an existing user and get a JWT.
+    - **POST** `/admin/login`: Admin Login an existing user and get a JWT.
 
-- **Restaurants**
-    - **GET** `/api/restaurants`: Get all restaurants.
-    - **POST** `/api/restaurants`: Create a new restaurant (Admin only).
-    - **GET** `/api/restaurants/:id`: Get details of a specific restaurant.
-    - **PUT** `/api/restaurants/:id`: Update restaurant details (Admin only).
-    - **DELETE** `/api/restaurants/:id`: Delete a restaurant (Admin only).
 
 - **Menu**
-    - **GET** `/api/menu/:restaurantId`: Get all menu items for a specific restaurant.
-    - **POST** `/api/menu/:restaurantId`: Add a new menu item (Admin only).
-    - **PUT** `/api/menu/:id`: Update a menu item (Admin only).
-    - **DELETE** `/api/menu/:id`: Delete a menu item (Admin only).
+    - **GET** `/menu`: Get all menu items for a specific restaurant.
+    - **POST** `/menu`: Add a new menu item (Admin only).
+    - **PUT** `/menu/:id`: Update a menu item (Admin only).
+    - **DELETE** `/menu/:id`: Delete a menu item (Admin only).
 
 - **Orders**
-    - **GET** `/api/orders`: Get all orders (Admin only).
-    - **POST** `/api/orders`: Create a new order.
-    - **GET** `/api/orders/:id`: Get details of a specific order.
+    - **GET** `/orders`: Get all orders (Admin only).
+    - **POST** `/order`: Create a new order.
+    - **GET** `/orders/:id`: Get details of a specific order.
 
-## Contributing
 
-We welcome contributions to improve the project. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-xyz`).
-3. Make your changes and commit them (`git commit -m 'Add feature xyz'`).
-4. Push to your forked repository (`git push origin feature-xyz`).
-5. Open a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
